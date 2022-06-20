@@ -21,8 +21,10 @@ public class SherlockAndSquares {
 
     }
     public static int perfectSquare(int a, int b){
+        //To find all perfect squares in a range all we have to do is find all of the perfect squares for both endpoints, then find the difference of them
         double upperSquares= sqrt(b);
         double lowerSquares= ceil(sqrt(a));
+        //This calculation leaves out the 1st perfect square, so we must add one to account for it
         double result = upperSquares-lowerSquares+1;
         return (int)result;
     }
