@@ -1,4 +1,4 @@
-package SherlockAndSquares.src.main.java;
+package SherlockAndSquares.src.main;
 import java.util.*;
 import java.util.stream.IntStream;
 
