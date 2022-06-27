@@ -4,16 +4,14 @@ import java.util.ArrayList;
 
 public class WalkOnTheAxis {
     public static void main(String[] args) {
-        getDistance(2, 1,2);
-        getDistance(3, 1,3,2);
+        walkOnTheAxis(2, 1,2);
+        walkOnTheAxis(3, 1,3,2);
     }
 
-    static void getDistance(int amountOfCases, int... distances){
+    //This is the code to solve the challenge
+    static void walkOnTheAxis(int amountOfCases, int... distances){
         int currentDistance =0;
         ArrayList<Integer>result= new ArrayList<Integer>();
-        if(amountOfCases==0){
-            result.add(0);
-        }else{
             for(int i : distances){
                 int lightsOn = i+1;
                 //Since N is the rightmost light that is on, and the leftmost light is (0,0) the first cycle is just N*2
@@ -27,7 +25,7 @@ public class WalkOnTheAxis {
                 result.add(currentDistance);
                 currentDistance=0;
             }
-        }
+
         for(Integer o: result){
             System.out.println(o);
         }
